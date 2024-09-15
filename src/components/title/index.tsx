@@ -1,6 +1,5 @@
 import React, { FC, ReactNode } from "react";
 import { ITitleType } from "@/types/text";
-import { PROJECT_IDEA } from "@/constants/common";
 
 interface Props {
   text: string;
