@@ -33,11 +33,13 @@ export default function RootLayout({
           geistSans.variable,
           geistMono.variable,
           "antialiased",
-          "flex flex-col items-center gap-4 max-w-screen-xl min-h-screen ml-auto mr-auto",
+          "flex flex-col items-center max-w-screen-xl min-h-screen ml-auto mr-auto",
         )}
       >
         <Header />
-        <main className="h-full w-full p-6 bg-background">{children}</main>
+        <main className="h-full w-full pl-6 pr-6 bg-background">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

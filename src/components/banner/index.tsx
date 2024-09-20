@@ -4,7 +4,7 @@ import banner from "@/images/header-banner.jpg";
 
 const Banner = () => {
   return (
-    <div className={"border-t-[3px] border-[#ffee04]"}>
+    <div className={" mb-4"}>
       <Image src={banner} alt={"header banner"} />
     </div>
   );
