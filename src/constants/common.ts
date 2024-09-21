@@ -62,3 +62,5 @@ export enum TITLES {
   H5 = "h5",
   H6 = "h6",
 }
+
+export const FOOTER_COPYRIGHT = "© 2024 Olena Yanko";
