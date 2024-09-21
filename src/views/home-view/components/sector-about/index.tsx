@@ -10,15 +10,15 @@ const { TITLE, DESCRIPTIONS } = ABOUT;
 const aboutH2 = "About the Artist";
 const projectsH2 = "Projects";
 
-const SectorMain = () => {
+const SectorAbout = () => {
   return (
-    <>
+    <div className={"mb-8"}>
       <div className={"hidden opacity-0"}>
         <Title text={TITLE} type={TITLES.H1} />
       </div>
 
       <div className={"flex flex-wrap gap-6 mb-12 lg:flex-nowrap"}>
-        <div className={"min-w-60 w-full lg:w-1/2"}>
+        <div className={"min-w-60 w-full lg:w-1/2 ml-auto mr-auto"}>
           <Image
             src={helen}
             alt={"Olena Yanko Artist"}
@@ -36,8 +36,8 @@ const SectorMain = () => {
           <ClientButton />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default SectorMain;
+export default SectorAbout;

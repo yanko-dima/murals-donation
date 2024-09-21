@@ -1,20 +1,15 @@
 import React from "react";
 import Link from "next/link";
-
-const routes = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "Project Flowers of Gratitude",
-    path: "/flowers-of-gratitude",
-  },
-];
+import { routes } from "@/constants/routes";
 
 const MainNav = () => {
   return (
-    <nav className={"flex flex-wrap items-center mb-8 text-xl"}>
+    <nav
+      className={
+        "hidden lg:flex gap-2 flex-wrap justify-center items-center text-xl pl-4 pr-4 mb-8"
+      }
+      role="menu"
+    >
       {routes.map((route) => (
         <div key={route.name}>
           <Link
@@ -22,6 +17,7 @@ const MainNav = () => {
               "uppercase font-medium hover:bg-secondary py-2 px-4 whitespace-nowrap"
             }
             href={route.path}
+            target={route.isTargetBlank ? "_blank" : "_self"}
           >
             {route.name}
           </Link>

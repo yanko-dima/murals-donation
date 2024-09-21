@@ -9,7 +9,7 @@ const { HADERSLEV } = DENMARK_MURALS;
 
 const SectorHaderslev = () => {
   return (
-    <div className={"flex flex-wrap gap-6 mb-12 lg:flex-nowrap"}>
+    <div className={"flex flex-wrap gap-6 mb-8 lg:flex-nowrap"}>
       <div className={"min-w-60 w-full lg:w-1/2"}>
         <Image src={haderslev} alt={"haderslev"} />
       </div>

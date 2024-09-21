@@ -1,12 +1,14 @@
 import React from "react";
 import Logo from "@/components/logo";
-import MainNav from "@/components/main-nav";
+import DesktopNav from "@/components/nav/desctop-nav";
+import MobileNav from "@/components/nav/mobile-nav";
 
 const Header = () => {
   return (
-    <header>
+    <header className={"relative w-full"}>
       <Logo />
-      <MainNav />
+      <DesktopNav />
+      <MobileNav />
     </header>
   );
 };

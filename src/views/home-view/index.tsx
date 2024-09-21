@@ -1,5 +1,5 @@
 import Container from "@/components/container";
-import SectorAbout from "@/views/HomeView/components/sector-about";
+import SectorAbout from "@/views/home-view/components/sector-about";
 
 const HomeView = () => {
   return (
