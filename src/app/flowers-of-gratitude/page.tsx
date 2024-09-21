@@ -1,8 +1,7 @@
-import React from "react";
-import FlowersOfGratitudeView from "@/components/flowers-of-gratitude/view";
+import FlowersOfGratitudeView from "@/views/flowers-of-gratitude";
 
-const Page = () => {
+const FlowersOfGratitudePage = () => {
   return <FlowersOfGratitudeView />;
 };
 
-export default Page;
+export default FlowersOfGratitudePage;

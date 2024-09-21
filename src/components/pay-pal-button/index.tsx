@@ -1,19 +1,24 @@
 import React, { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { FaPaypal } from "react-icons/fa";
+import { clsx } from "clsx";
 
 const DEFAULT_TEXT = "donate us";
 
 interface Props {
   text?: string;
+  className?: string;
 }
 
-const PayPalButton: FC<Props> = ({ text = DEFAULT_TEXT }) => {
+const PayPalButton: FC<Props> = ({ text = DEFAULT_TEXT, className }) => {
   return (
     <form action="https://www.paypal.com/donate" method="post" target="_top">
       <input type="hidden" name="hosted_button_id" value="BCAEQ4WEN8Y7A" />
-      <Button type={"submit"} className={"flex items-center gap-2 capitalize"}>
-        <FaPaypal className=" h-4 w-4" /> {text}
+      <Button
+        type={"submit"}
+        className={clsx("flex items-center gap-2 capitalize", className)}
+      >
+        <FaPaypal className=" h-6 w-6" /> {text}
       </Button>
       {/*<input*/}
       {/*  type="image"*/}

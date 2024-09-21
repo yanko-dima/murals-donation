@@ -1,14 +1,7 @@
-import Title from "@/components/title";
-import { TITLE } from "@/constants/common";
-import ClientButton from "@/components/client-button";
+import HomeView from "@/views/HomeView";
 
-export default function Home() {
-  const title = "Hello I`m Helen";
+const HomePage = () => {
+  return <HomeView />;
+};
 
-  return (
-    <>
-      <Title text={title} type={TITLE.H2} />
-      <ClientButton />
-    </>
-  );
-}
+export default HomePage;
