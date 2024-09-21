@@ -11,9 +11,7 @@ const { SYMBOLISM, IMPLEMENTATION, SOCIAL_ASPECT, FEATURE_PLANS } =
 const SectorSymbolism = () => {
   return (
     <div
-      className={
-        "flex flex-wrap gap-6 mb-12 lg:flex-nowrap lg:flex-row-reverse"
-      }
+      className={"flex flex-wrap gap-6 mb-8 lg:flex-nowrap lg:flex-row-reverse"}
     >
       <div className={"min-w-60 w-full lg:w-1/2"}>
         <Image src={symbolism} alt={"flowers symbolism"} />
@@ -36,7 +34,7 @@ const SectorSymbolism = () => {
           <Title text={FEATURE_PLANS.TITLE} type={TITLES.H2} isDots />
           <p className={"mb-4"}>{FEATURE_PLANS.DESCRIPTION}</p>
         </div>
-        <PayPalButton className={"mb-4"} />
+        <PayPalButton />
       </div>
     </div>
   );
