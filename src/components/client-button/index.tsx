@@ -9,7 +9,11 @@ const ClientButton = () => {
   const router = useRouter();
 
   const onButtonClick = (): void => router.push(ROUTES.FLOWERS_OF_GRATITUDE);
-  return <Button onClick={onButtonClick}>Flowers of gratitude</Button>;
+  return (
+    <Button variant={"secondary"} onClick={onButtonClick}>
+      Flowers of gratitude
+    </Button>
+  );
 };
 
 export default ClientButton;

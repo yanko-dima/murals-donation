@@ -1,26 +1,41 @@
 import React, { FC, ReactNode } from "react";
 import { ITitleType } from "@/types/text";
 
-interface Props {
-  text: string;
-  type: ITitleType;
-}
+const getTitle = (
+  text: string,
+  type: ITitleType,
+  isDots: boolean,
+): ReactNode => {
+  const prefix = isDots ? ":" : "";
 
-const getTitle = (text: string, type: ITitleType): ReactNode => {
   switch (type) {
     case "h1":
       return (
-        <h1 className={"text-3xl font-semibold mb-8 text-center"}>{text}</h1>
+        <h1 className={"text-4xl font-semibold mb-8 text-center"}>
+          {text}
+          {prefix}
+        </h1>
       );
     case "h2":
-      return <h2 className={"text-xl font-semibold mb-4"}>{text}:</h2>;
+      return (
+        <h2 className={"text-xl font-semibold mb-4"}>
+          {text}
+          {prefix}
+        </h2>
+      );
     default:
-      return <p>{text}</p>;
+      return <h6>{text}</h6>;
   }
 };
 
-const Title: FC<Props> = ({ text, type = "h1" }) => {
-  return getTitle(text, type);
+interface Props {
+  text: string;
+  type: ITitleType;
+  isDots?: boolean;
+}
+
+const Title: FC<Props> = ({ text, type = "h1", isDots = false }) => {
+  return getTitle(text, type, isDots);
 };
 
 export default Title;

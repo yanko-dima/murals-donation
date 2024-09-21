@@ -1,45 +1,40 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import { clsx } from "clsx";
+import { Roboto } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { clsx } from "clsx";
+import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "The mural in Denmark",
-  description: "Donation for the mural in Denmark",
+  title: "Olena Yanko Artist",
+  description:
+    "Ukrainian artist Murals art and paintings. Artworks for sale. Based in Kyiv.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface ILayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: Readonly<ILayoutProps>) {
   return (
     <html lang="en">
       <body
         className={clsx(
-          geistSans.variable,
-          geistMono.variable,
+          roboto.className,
           "antialiased",
           "flex flex-col items-center max-w-screen-xl min-h-screen ml-auto mr-auto",
         )}
       >
         <Header />
-        <main className="h-full w-full pl-6 pr-6 bg-background">
-          {children}
-        </main>
+        <main className="h-full w-full bg-background">{children}</main>
         <Footer />
       </body>
     </html>
