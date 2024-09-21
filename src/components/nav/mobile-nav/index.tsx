@@ -22,36 +22,37 @@ const MobileNav = () => {
             <IoMenu />
           </Button>
         )}
-        {isOpen && (
-          <Button variant={"ghost"} onClick={toggleMenu}>
-            <IoMdClose />
-          </Button>
-        )}
+        {/*{isOpen && (*/}
+        {/*  <Button variant={"ghost"} onClick={toggleMenu}>*/}
+        {/*    <IoMdClose />*/}
+        {/*  </Button>*/}
+        {/*)}*/}
       </div>
-      {isOpen && (
-        <div
-          className={
-            "absolute flex bg-white pt-[70px] pb-12 left-0 top-0 z-9 w-full h-screen lg:hidden"
-          }
-        >
-          <nav className={"flex flex-col gap-4"} role="menu">
-            {routes.map((route) => (
-              <div key={route.name}>
-                <Link
-                  className={
-                    "uppercase font-medium hover:bg-secondary py-2 px-4 ml-2 whitespace-nowrap"
-                  }
-                  href={route.path}
-                  target={route.isTargetBlank ? "_blank" : "_self"}
-                  onClick={toggleMenu}
-                >
-                  {route.name}
-                </Link>
-              </div>
-            ))}
-          </nav>
-        </div>
-      )}
+      <div
+        className={`fixed top-0 left-0 z-10 w-full h-screen bg-white pt-6 pb-6 transition-transform duration-300 ease-in-out lg:hidden ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <Button className={"mb-6"} variant={"ghost"} onClick={toggleMenu}>
+          <IoMdClose />
+        </Button>
+        <nav className={"flex flex-col gap-4"} role="menu">
+          {routes.map((route) => (
+            <div key={route.name}>
+              <Link
+                className={
+                  "uppercase font-medium hover:bg-secondary py-2 px-4 ml-2 whitespace-nowrap"
+                }
+                href={route.path}
+                target={route.isTargetBlank ? "_blank" : "_self"}
+                onClick={toggleMenu}
+              >
+                {route.name}
+              </Link>
+            </div>
+          ))}
+        </nav>
+      </div>
     </>
   );
 };
