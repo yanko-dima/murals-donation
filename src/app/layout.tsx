@@ -30,11 +30,13 @@ export default function RootLayout({ children }: Readonly<ILayoutProps>) {
         className={clsx(
           roboto.className,
           "antialiased",
-          "flex flex-col items-center max-w-screen-xl min-h-screen ml-auto mr-auto",
+          "flex flex-col items-center min-h-screen ml-auto mr-auto",
         )}
       >
         <Header />
-        <main className="h-full w-full bg-background">{children}</main>
+        <main className="h-full w-full max-w-screen-xl bg-background">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -54,6 +54,12 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --primary-button: 228 75% 32%;
+
+    --gray-primary: #333333;
+    --gray-default: #4D4D4D;
+    --gray-bg: #F0F0F0;
+    --gray-shadow: #B0B0B0;
+    --gray-accent: #808080;
   }
   .dark {
     --background: 240 10% 3.9%;

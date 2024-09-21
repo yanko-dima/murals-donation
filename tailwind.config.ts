@@ -11,6 +11,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "gray-primary": "var(--gray-primary)",
+        "gray-bg": "var(--gray-bg)",
+        "gray-accent": "var(--gray-accent)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
