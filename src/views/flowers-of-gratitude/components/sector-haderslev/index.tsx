@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import haderslev from "@/images/haderslev.jpg";
 import Title from "@/components/title";
-import PayPalButton from "@/components/pay-pal-button";
+import KoFiButton from "@/components/ko-fi-button";
 import { DENMARK_MURALS, TITLES } from "@/constants/common";
 
 const { HADERSLEV } = DENMARK_MURALS;
@@ -16,11 +16,11 @@ const SectorHaderslev = () => {
       <div className={"lg:w-1/2"}>
         <Title text={HADERSLEV.TITLE} type={TITLES.H2} isDots={false} />
         {HADERSLEV.DESCRIPTIONS.map((item, index) => (
-          <p key={index} className={"mb-4"}>
+          <p key={index} className={"mb-6"}>
             {item}
           </p>
         ))}
-        <PayPalButton />
+        <KoFiButton />
       </div>
     </div>
   );

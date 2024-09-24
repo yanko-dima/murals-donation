@@ -1,9 +1,9 @@
 import React from "react";
 import Title from "@/components/title";
-import { FLOWERS_OF_GRATITUDE, TITLES } from "@/constants/common";
 import Image from "next/image";
 import symbolism from "@/images/flowers1.jpg";
-import PayPalButton from "@/components/pay-pal-button";
+import KoFiButton from "@/components/ko-fi-button";
+import { FLOWERS_OF_GRATITUDE, TITLES } from "@/constants/common";
 
 const { SYMBOLISM, IMPLEMENTATION, SOCIAL_ASPECT, FEATURE_PLANS } =
   FLOWERS_OF_GRATITUDE;
@@ -30,11 +30,11 @@ const SectorSymbolism = () => {
           <Title text={SOCIAL_ASPECT.TITLE} type={TITLES.H2} isDots />
           <p className={"mb-4"}>{SOCIAL_ASPECT.DESCRIPTION}</p>
         </div>
-        <div className={"mb-4"}>
+        <div className={"mb-6"}>
           <Title text={FEATURE_PLANS.TITLE} type={TITLES.H2} isDots />
           <p className={"mb-4"}>{FEATURE_PLANS.DESCRIPTION}</p>
         </div>
-        <PayPalButton />
+        <KoFiButton />
       </div>
     </div>
   );

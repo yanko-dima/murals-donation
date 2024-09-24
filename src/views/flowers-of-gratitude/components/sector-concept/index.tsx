@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import cars from "@/images/cars-irpen-1.jpg";
 import Title from "@/components/title";
+import KoFiButton from "@/components/ko-fi-button";
 import { FLOWERS_OF_GRATITUDE, TITLES } from "@/constants/common";
-import PayPalButton from "@/components/pay-pal-button";
 
 const { GOAL, CONCEPT } = FLOWERS_OF_GRATITUDE;
 
@@ -17,8 +17,9 @@ const SectorConcept = () => {
         <Title text={GOAL.TITLE} type={TITLES.H2} isDots />
         <p className={"mb-4"}>{GOAL.DESCRIPTION}</p>
         <Title text={CONCEPT.TITLE} type={TITLES.H2} isDots />
-        <p className={"mb-4"}>{CONCEPT.DESCRIPTION}</p>
-        <PayPalButton />
+        <p className={"mb-6"}>{CONCEPT.DESCRIPTION}</p>
+
+        <KoFiButton />
       </div>
     </div>
   );

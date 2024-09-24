@@ -53,7 +53,8 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --primary-button: 228 75% 32%;
+
+    --primary-button: #ff5f5f;
 
     --gray-primary: #333333;
     --gray-default: #4D4D4D;
